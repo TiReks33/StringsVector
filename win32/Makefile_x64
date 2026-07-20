@@ -1,0 +1,10 @@
+default: strings_vector.lib
+
+strings_vector.lib: strings_vector_private.c strings_vector_private.h strings_vector.h
+	x86_64-w64-mingw32-gcc -D_WIN32_WINNT=0x0502 -c strings_vector_private.c -o strings_vector.lib
+
+clean:
+	-@rm -f strings_vector.lib 2>/dev/null 
+
+
+
